@@ -14,7 +14,7 @@ function vila(heroi) {
     } else if (escolha === "2") {
         return "poco";
     }
-    return "vila"
+    return "vila";
 }
 
 module.exports = vila;

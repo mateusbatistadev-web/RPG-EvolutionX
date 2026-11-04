@@ -1,4 +1,5 @@
 const prompt = require("prompt-sync")()
+const aranha = require("../inimigo-aranha.js/aranha");
 const sorte = require ("../sistemas/sorte");
 
 function floresta(heroi) {
@@ -6,7 +7,7 @@ function floresta(heroi) {
     console.log("[FLORESTA] Galhos fechados. Algo se mexe no chão.");
 
     if (sorte(0.4)) {
-        heroi.veneno = heroi.veneno + 3;
+        heroi.veneno = heroi.veneno + aranha.veneno;
         console.log("Uma aranha te morde! Você está envenenado por " + heroi.veneno + " passos.");
     } else {
         console.log("Era só o vento.");

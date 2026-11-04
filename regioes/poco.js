@@ -1,3 +1,5 @@
+const prompt = require("prompt-sync")()
+
 function poco(heroi){
 console.log("");
     console.log("[POÇO] Um poço antigo. Não dá para ver o fundo.");
@@ -7,7 +9,7 @@ console.log("");
     }
     let escolha = prompt("> ");
     if (escolha === "1") {
-      local = "vila";
+      return "vila";
     } else if (escolha === "2"&& heroi.vida < 10) {
         heroi.vida = heroi.vida + 3
         if (heroi.vida > 10)
@@ -19,4 +21,7 @@ console.log("");
       heroi.inventario.push("corda");
       console.log("Inventário: " + heroi.inventario);
     }
-    }
+    return "poco";
+}
+
+module.exports = poco;
