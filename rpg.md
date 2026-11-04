@@ -26,6 +26,12 @@ bixos normais tem 15
 
 Inimigos com Ficha:
 
+Aranha magana : Veneno, aura magana Aperece na vila
+
+Golem de areia magano: appos perder metade da vida ele, ativa a aura magana  e da a tocha
+
+DRagao magano sobrio: aura magana, 
+
 
 
 
