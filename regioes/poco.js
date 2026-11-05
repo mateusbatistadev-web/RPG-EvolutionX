@@ -1,27 +1,25 @@
-const prompt = require("prompt-sync")()
+const prompt = require("prompt-sync")();
 
-function poco(heroi){
-console.log("");
-    console.log("[POÇO] Um poço antigo. Não dá para ver o fundo.");
-    console.log("1 - voltar para a vila   2 - beber água (recupera 3 de vida)");
-    if (heroi.inventario.includes("moeda furada")) {
-      console.log("3 - jogar a moeda furada no poço");
-    }
-    let escolha = prompt("> ");
-    if (escolha === "1") {
-      return "vila";
-    } else if (escolha === "2"&& heroi.vida < 10) {
-        heroi.vida = heroi.vida + 3
-        if (heroi.vida > 10)
-          heroi.vida = 10
-      console.log("A água é gelada. Vida: " + heroi.vida);
-    } else if (escolha === "3" && heroi.inventario.includes("moeda furada")) {
-      console.log("A moeda cai sem fazer barulho. Uma corda sobe do fundo do poço, sozinha.");
-      heroi.inventario.shift()
-      heroi.inventario.push("corda");
-      console.log("Inventário: " + heroi.inventario);
-    }
-    return "poco";
+function poco(heroi) {
+  console.log("\n================ POÇO ANTIGO ================");
+  console.log("             ___________");
+  console.log("            /_________/|");
+  console.log("            |  POÇO   | |");
+  console.log("            |~~~~~~~~~|/");
+  console.log("             \\_______/");
+  console.log("\n[POÇO] A água parece limpa, mas uma energia estranha vem de seu fundo.");
+  console.log("1 - Beber a água (recupera até 8 pontos de vida)");
+  console.log("2 - Não beber e seguir para o castelo");
+  const escolha = prompt("> ");
+
+  if (escolha === "1") {
+    heroi.vida += 8;
+    if (heroi.vida > heroi.vidaMaxima) heroi.vida = heroi.vidaMaxima;
+    console.log("A água restaura suas forças. Vida: " + heroi.vida + "/" + heroi.vidaMaxima);
+  } else {
+    console.log("Você decide não arriscar e segue em frente.");
+  }
+  return "chefe";
 }
 
 module.exports = poco;

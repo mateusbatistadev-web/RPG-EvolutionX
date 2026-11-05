@@ -3,8 +3,15 @@ const aranha = require("../inimigo-aranha.js/aranha");
 const sorte = require ("../sistemas/sorte");
 
 function floresta(heroi) {
-    console.log("");
-    console.log("[FLORESTA] Galhos fechados. Algo se mexe no chão.");
+  console.log("\n============== FLORESTA MAGANA ==============");
+  console.log("       &&&                 &&&");
+  console.log("      &&&&&      ||       &&&&&");
+  console.log("     &&&&&&&     ||      &&&&&&&");
+  console.log("       ||        ||        ||");
+  console.log("  _____||________||________||______");
+  console.log("       //  //  CAMINHO  \\\\  \\\\");
+  console.log("  ~~~~~~~~ raízes e névoa ~~~~~~~~~~");
+  console.log("\n[ FLORESTA ] O vento sussurra entre as árvores. À frente está o Portal Central.");
 
     if (sorte(0.4)) {
         heroi.veneno = heroi.veneno + aranha.veneno;
@@ -21,4 +28,5 @@ function floresta(heroi) {
     }
     return "floresta"
 }
-module.exports = floresta
+
+module.exports = floresta;
