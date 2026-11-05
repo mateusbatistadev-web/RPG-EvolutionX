@@ -1,4 +1,6 @@
-const prompt = require("prompt-sync")();
+const prompt = require("prompt-sync")()
+const aranha = require("../inimigo-aranha.js/aranha");
+const sorte = require ("../sistemas/sorte");
 
 function floresta(heroi) {
   console.log("\n============== FLORESTA MAGANA ==============");
@@ -11,24 +13,20 @@ function floresta(heroi) {
   console.log("  ~~~~~~~~ raízes e névoa ~~~~~~~~~~");
   console.log("\n[ FLORESTA ] O vento sussurra entre as árvores. À frente está o Portal Central.");
 
-  if (!heroi.inventario.includes("Pedra Portal")) {
-    console.log("O portal está apagado. Você precisa da Pedra Portal.");
-    return "vila";
-  }
-
-  console.log("A Pedra Portal começa a brilhar em sua mão.");
-  console.log("1 - Usar a Pedra Portal e atravessar para o Deserto");
-  console.log("2 - Voltar para a Vila");
-  const escolha = prompt("> ");
-  if (escolha === "1") {
-    console.log("\n      .-----------------------.");
-    console.log("     /   PORTAL CENTRAL       \\");
-    console.log("    |       (((  )))           |");
-    console.log("     \\_______________________/");
-    console.log("A passagem se abre. Uma onda de calor vem do outro lado...");
-    return "deserto";
-  }
-  return "vila";
+    if (sorte(0.4)) {
+        heroi.veneno = heroi.veneno + aranha.veneno;
+        console.log("Uma aranha te morde! Você está envenenado por " + heroi.veneno + " passos.");
+    } else {
+        console.log("Era só o vento.");
+    }
+    console.log("1 - seguir para a ponte   2 - voltar para a vila");
+    let escolha = prompt("> ");
+    if (escolha === "1") {
+        return "ponte";
+    } else if (escolha === "2") {
+        return "vila";
+    }
+    return "floresta"
 }
 
 module.exports = floresta;
