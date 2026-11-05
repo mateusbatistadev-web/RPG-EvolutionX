@@ -1,0 +1,12 @@
+{
+  "name": "rpg-evolution-x",
+  "version": "1.0.0",
+  "description": "RPG de terminal ambientado em Magano Landia",
+  "main": "jogo.js",
+  "scripts": {
+    "start": "node jogo.js"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
