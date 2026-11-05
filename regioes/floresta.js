@@ -17,7 +17,7 @@ function floresta(heroi) {
     if (sorte(0.4)) {
         // heroi.veneno = heroi.veneno + aranha.veneno;
         const duracao = aranha.veneno[Math.floor(Math.random() * aranha.veneno.length)];
-heroi.veneno = (heroi.veneno || 0) + duracao;
+        heroi.veneno = (heroi.veneno || 0) + duracao; 
         console.log("Uma aranha te morde! Você está envenenado por " + heroi.veneno + " passos.");
     } else {
         console.log("Era só o vento.");
