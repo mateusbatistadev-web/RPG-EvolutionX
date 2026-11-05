@@ -41,8 +41,8 @@ while (jogando) {
     const venceu = combate(heroi, {
       nome: "Rei Dragão Magano",
       descricao: "O antigo rei está corrompido. Sua aura envolve todo o salão.",
-      vida: 38,
-      ataque: 7,
+      vida: 30,
+      ataque: 5,
       aura: true,
       envenena: true
     });

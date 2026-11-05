@@ -13,8 +13,8 @@ function deserto(heroi) {
   const venceu = combate(heroi, {
     nome: "Golem Magano de Areia",
     descricao: "Um gigante de areia endurecida. Ao perder metade da vida, sua aura desperta.",
-    vida: 24,
-    ataque: 5,
+    vida: 15,
+    ataque: 3,
     aura: true,
     envenena: false
   });

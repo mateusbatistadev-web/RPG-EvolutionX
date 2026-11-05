@@ -12,14 +12,23 @@ function poco(heroi) {
   console.log("2 - Não beber e seguir para o castelo");
   const escolha = prompt("> ");
 
-  if (escolha === "1") {
+
+
+
+  if(escolha == "1") {
     heroi.vida += 8;
     if (heroi.vida > heroi.vidaMaxima) heroi.vida = heroi.vidaMaxima;
     console.log("A água restaura suas forças. Vida: " + heroi.vida + "/" + heroi.vidaMaxima);
-  } else {
-    console.log("Você decide não arriscar e segue em frente.");
+  }  
+  console.log("Você decide não arriscar e segue em frente.")
+  if(escolha == "2"){
+  return "chefe"
   }
-  return "chefe";
+
+  return "poco"
+  
 }
+  
+
 
 module.exports = poco;

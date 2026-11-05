@@ -1,10 +1,10 @@
 const heroi = {
   nome: "",
-  vida: 30,
-  vidaMaxima: 30,
+  vida: 50,
+  vidaMaxima: 50,
   veneno: 0,
   defesa: 0,
-  ataque: 5,
+  ataque: [5, 10, 15][Math.floor(Math.random() * 3)],
   inventario: []
 };
 
