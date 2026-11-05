@@ -81,8 +81,15 @@ function combate(heroi, aranha) {
   }
 }
 
-combate(heroi, aranha);
+// combate(heroi, aranha);
 
-console.log("Inventário do herói:", heroi.inventario);
+// console.log("Inventário do herói:", heroi.inventario);
+
+// module.exports = aranha;
+
+if (require.main === module) {
+    combate(heroi, aranha);
+    console.log("Inventário do herói:", heroi.inventario);
+}
 
 module.exports = aranha;
