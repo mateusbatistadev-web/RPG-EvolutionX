@@ -47,7 +47,7 @@ function combate(heroi, dragao) {
     if (especial) {
       // Especial: dobro do maior dano e ignora a defesa
       dano = Math.max(...dragao.golpes) * 2;
-      console.log(`${dragao.nome} usou o ESPECIAL!`);
+      console.log(`${dragao.nome} usou o AURA MAGANA!`);
       if (defendendo) {
         console.log("A defesa foi quebrada!");
       }

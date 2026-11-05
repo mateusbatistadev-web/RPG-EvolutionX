@@ -52,9 +52,10 @@ function combate(heroi, aranha) {
     let dano;
 
     if (especial) {
+      
       // Especial: dobro do maior dano e ignora a defesa
       dano = Math.max(...aranha.veneno) * 2;
-      console.log(`${aranha.nome} usou o ESPECIAL!`);
+      console.log(`${aranha.nome} usou o AURA MAGANA!`);
       if (defendendo) {
         console.log("A defesa foi quebrada!");
       }

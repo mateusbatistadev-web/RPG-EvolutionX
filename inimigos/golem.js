@@ -7,7 +7,7 @@ const golem = {
   vida: 60,
   vidaMaxima: 60,
   golpes: [5, 10, 15],
-  inventario: ["Tocha"],
+  inventario: ["Tocha Magana"],
 };
 
 function combate(heroi, golem) {
@@ -57,7 +57,7 @@ function combate(heroi, golem) {
     if (especial) {
       // Especial: dobro do maior dano e ignora a defesa
       dano = Math.max(...golem.golpes) * 2;
-      console.log(`${golem.nome} usou o ESPECIAL!`);
+      console.log(`${golem.nome} usou o AURA MAGANA!`);
       if (defendendo) {
         console.log("A defesa foi quebrada!");
       }
